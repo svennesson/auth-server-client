@@ -41,8 +41,13 @@ export default class Register extends React.Component {
         this.setState({sending: true})
 
         UserApi.create(data)
-            .then(() => console.log('hejsan'))
-            .catch(e => console.error(e));
+            .then(() => {
+                this.props.history.push('/login');
+            })
+            .catch((e) => {
+                console.error(e);
+                this.setState({sending: false})
+            });
     }
 
     render () {

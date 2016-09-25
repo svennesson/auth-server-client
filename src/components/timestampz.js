@@ -23,8 +23,22 @@ export default class Timestampz extends React.Component {
             })
     }
 
+    _formatTimestamp (time) {
+        if (time < 10) {
+            return '0' + time;
+        }
+
+        return time;
+    }
+
     _displayFormattedTimestamp (timestamp) {
-        return `${timestamp[0]}-${timestamp[1]}-${timestamp[2]} ${timestamp[3]}:${timestamp[4]}`;
+        var year = timestamp[0];
+        var month = this._formatTimestamp(timestamp[1]);
+        var day = this._formatTimestamp(timestamp[2]);
+        var hour = this._formatTimestamp(timestamp[3]);
+        var minute = this._formatTimestamp(timestamp[4]);
+
+        return `${year}-${month}-${day} ${hour}:${minute}`;
     }
 
     render () {

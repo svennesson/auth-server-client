@@ -5,7 +5,8 @@ import Col from 'react-bootstrap/lib/Col'
 import Row from 'react-bootstrap/lib/Row'
 import Input from 'react-bootstrap/lib/Input'
 import assign from '../util/assign'
-import UserApi from '../util/user-api';
+import UserApi from '../util/user-api'
+import { Link } from 'react-router'
 
 export default class Login extends React.Component {
     constructor (props) {
@@ -69,6 +70,7 @@ export default class Login extends React.Component {
                             </Row>
                             <Row className='submit-button-row'>
                                 <Button bsSize='large' bsStyle='primary' disabled={!this._checkValid() || this.state.sending} onClick={::this._logIn}>Logga in</Button>
+                                <Link id="register-link-button" to='register' className='btn btn-primary btn-lg'>Registrera dig</Link>
                             </Row>
                             {this.state.errorCode === 401 ? this._renderErrorMessage() : null}
                         </form>
