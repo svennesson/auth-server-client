@@ -3,7 +3,7 @@
 import Api from './api';
 import Auth from './auth';
 
-let baseUrl = 'http://localhost:4500/api/users',
+let baseUrl = 'http://authserver-svennesson.boxfuse.io:8080/api/',
     contentType = 'application/json';
 
 export default {
