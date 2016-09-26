@@ -40,7 +40,7 @@ module.exports = {
             'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
         }),
         new HtmlWebpackPlugin({
-            title: 'Budbee',
+            title: 'Auth-server',
             template: 'src/index.html',
             inject: 'body'
         }),

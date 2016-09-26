@@ -45,8 +45,8 @@ export default class Login extends React.Component {
 
     _renderErrorMessage () {
         return (
-            <Row>
-                <h3>Wrong username and/or passowrd</h3>
+            <Row className="login-error-container">
+                <h3>Wrong username and/or password, please try again</h3>
             </Row>
         )
     }
